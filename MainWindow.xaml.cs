@@ -19,6 +19,12 @@ namespace FlappyDog
         public MainWindow()
         {
             InitializeComponent();
+            AfficheAccueil();
+        }
+        private void AfficheAccueil()
+        {
+            UCAccueil uc = new UCAccueil();
+            ZoneJeu.Content = uc;
         }
     }
 }

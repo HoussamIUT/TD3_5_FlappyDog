@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlappyDog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/wp6956942.jpg"/>
-        </Grid.Background>
+        Title="MainWindow" Height="500" Width="800">
+    <ContentControl x:Name="ZoneJeu"/>
+    <ContentControl.Background>
+        <ImageBrush ImageSource="wp6956942.jpg"/>
+    </ContentControl.Background>
 
-    </Grid>
+
 </Window>

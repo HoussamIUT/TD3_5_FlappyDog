@@ -9,10 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\TitreAccueil-removebg-preview.png" />
+    <None Remove="img\TitreAccueil.png" />
+    <None Remove="img\wp6956942.jpg" />
     <None Remove="wp6956942.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\TitreAccueil-removebg-preview.png" />
+    <Resource Include="img\wp6956942.jpg" />
     <Resource Include="wp6956942.jpg" />
   </ItemGroup>
 
