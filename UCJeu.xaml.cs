@@ -20,9 +20,16 @@ namespace FlappyDog
     /// </summary>
     public partial class UCJeu : UserControl
     {
+        private static BitmapImage AilesHautSansFond;
         public UCJeu()
         {
             InitializeComponent();
+            ChargeImagesHauts();
+            imgChien.Source = AilesHautSansFond;
+        }
+        private void ChargeImagesHauts()
+        {
+            AilesHautSansFond = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
         }
     }
 }

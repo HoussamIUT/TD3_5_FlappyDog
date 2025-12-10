@@ -16,6 +16,7 @@ namespace FlappyDog
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string Perso { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -32,7 +33,15 @@ namespace FlappyDog
         {
             UCChoixSkin uc = new UCChoixSkin();
             ZoneJeu.Content = uc;
+            uc.butDemarrer.Click += AfficherJeu;
         }
+
+        private void AfficherJeu(object sender, RoutedEventArgs e)
+        {
+            UCJeu uc = new UCJeu();
+            ZoneJeu.Content = uc;
+        }
+
         private void AfficherRegles(object sender, RoutedEventArgs e)
         {
             UCReglesJeu uc = new UCReglesJeu();
@@ -40,6 +49,6 @@ namespace FlappyDog
         }
 
 
-
     }
+    //
 }
