@@ -24,7 +24,7 @@
                 <ImageBrush ImageSource="/img/BoutonRegles_resized.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="butParametre" HorizontalAlignment="Left" Margin="454,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
+        <Button x:Name="butParametre" Click="Quitter_Click" HorizontalAlignment="Left" Margin="454,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
