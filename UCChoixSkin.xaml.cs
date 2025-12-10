@@ -24,5 +24,17 @@ namespace FlappyDog
         {
             InitializeComponent();
         }
+        private void rbSkin1_Click(object sender, RoutedEventArgs e)
+        {
+            butDemarrer.IsEnabled = true;
+        }
+        private void rbSkin2_Click(object sender, RoutedEventArgs e)
+        {
+            butDemarrer.IsEnabled = true;
+        }
+        private void rbSkin3_Click(object sender, RoutedEventArgs e)
+        {
+            butDemarrer.IsEnabled = true;
+        }
     }
 }
