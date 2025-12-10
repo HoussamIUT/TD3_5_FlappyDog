@@ -28,10 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="UCChoixSkin.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="img\BoutonJouer.png" />
     <Resource Include="img\BoutonJouer_resized.png" />
     <Resource Include="img\BoutonParametres.png" />
@@ -46,7 +42,6 @@
     <Resource Include="img\ChienAilesHautSansFond.png" />
     <Resource Include="img\TitreAccueil-removebg-preview.png" />
     <Resource Include="img\wp6956942.jpg" />
-    <Resource Include="UCChoixSkin.xaml" />
     <Resource Include="wp6956942.jpg" />
   </ItemGroup>
 
