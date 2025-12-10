@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="img\chien3haut.png" />
     <None Remove="img\TitreAccueil-removebg-preview.png" />
     <None Remove="img\TitreAccueil.png" />
     <None Remove="img\wp6956942.jpg" />
@@ -17,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="img\chien3haut.png" />
     <Resource Include="img\TitreAccueil-removebg-preview.png" />
     <Resource Include="img\wp6956942.jpg" />
     <Resource Include="wp6956942.jpg" />
