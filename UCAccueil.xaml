@@ -12,7 +12,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush Stretch="Fill"/>
+                <ImageBrush Stretch="Fill" ImageSource="/img/BoutonJouer_resized.png"/>
             </Button.Background>
         </Button>
         <Image Margin="0,40,0,0" Source="/img/TitreAccueil-removebg-preview.png" Stretch="Fill" Width="350" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -21,7 +21,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="/img/BoutonRegles_resized.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="butParametre" HorizontalAlignment="Left" Margin="450,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
@@ -29,7 +29,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="/img/BoutonQuitter_resized.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="butQuitter" HorizontalAlignment="Left" Margin="140,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
@@ -37,7 +37,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="/img/BoutonParametres_resized.png"/>
             </Button.Background>
         </Button>
 
