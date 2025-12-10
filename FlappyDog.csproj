@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\BoutonJouer.png" />
+    <None Remove="img\BoutonParametres.png" />
+    <None Remove="img\BoutonRegles.png" />
     <None Remove="img\TitreAccueil-removebg-preview.png" />
     <None Remove="img\TitreAccueil.png" />
     <None Remove="img\wp6956942.jpg" />
@@ -16,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\BoutonJouer.png" />
+    <Resource Include="img\BoutonParametres.png" />
+    <Resource Include="img\BoutonRegles.png" />
     <Resource Include="img\TitreAccueil-removebg-preview.png" />
     <Resource Include="img\wp6956942.jpg" />
     <Resource Include="wp6956942.jpg" />
