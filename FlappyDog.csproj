@@ -10,7 +10,10 @@
 
   <ItemGroup>
     <None Remove="img\BoutonJouer.png" />
+    <None Remove="img\BoutonJouer_resized.png" />
     <None Remove="img\BoutonParametres.png" />
+    <None Remove="img\BoutonParametres_resized.png" />
+    <None Remove="img\BoutonQuitter_resized.png" />
     <None Remove="img\BoutonRegles.png" />
     <None Remove="img\Chien2AilesBasSansFond.png" />
     <None Remove="img\Chien2AilesHautSansFond.png" />
@@ -25,8 +28,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="UCChoixSkin.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="img\BoutonJouer.png" />
+    <Resource Include="img\BoutonJouer_resized.png" />
     <Resource Include="img\BoutonParametres.png" />
+    <Resource Include="img\BoutonParametres_resized.png" />
+    <Resource Include="img\BoutonQuitter_resized.png" />
     <Resource Include="img\BoutonRegles.png" />
     <Resource Include="img\Chien2AilesBasSansFond.png" />
     <Resource Include="img\Chien2AilesHautSansFond.png" />
@@ -36,6 +46,7 @@
     <Resource Include="img\ChienAilesHautSansFond.png" />
     <Resource Include="img\TitreAccueil-removebg-preview.png" />
     <Resource Include="img\wp6956942.jpg" />
+    <Resource Include="UCChoixSkin.xaml" />
     <Resource Include="wp6956942.jpg" />
   </ItemGroup>
 
