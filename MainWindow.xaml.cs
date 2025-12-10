@@ -25,6 +25,12 @@ namespace FlappyDog
         {
             UCAccueil uc = new UCAccueil();
             ZoneJeu.Content = uc;
+            uc.butJouer.Click += AfficherChoixPerso;
+        }
+        private void AfficherChoixPerso(object sender, RoutedEventArgs e)
+        {
+            UCChoixSkin uc = new UCChoixSkin();
+            ZoneJeu.Content = uc;
         }
     }
 }
