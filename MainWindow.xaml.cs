@@ -26,11 +26,19 @@ namespace FlappyDog
             UCAccueil uc = new UCAccueil();
             ZoneJeu.Content = uc;
             uc.butJouer.Click += AfficherChoixPerso;
+            uc.butRegles.Click += AfficherRegles;
         }
         private void AfficherChoixPerso(object sender, RoutedEventArgs e)
         {
             UCChoixSkin uc = new UCChoixSkin();
             ZoneJeu.Content = uc;
         }
+        private void AfficherRegles(object sender, RoutedEventArgs e)
+        {
+            UCReglesJeu uc = new UCReglesJeu();
+            ZoneJeu.Content = uc;
+        }
+
+
     }
 }
