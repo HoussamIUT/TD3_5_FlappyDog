@@ -7,13 +7,39 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,200,0,0"/>
-        <Image Margin="0,50,0,0" Source="/img/TitreAccueil-removebg-preview.png" Stretch="Fill" Width="350" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button x:Name="butRegles" Content="Règles" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
-        <Button x:Name="butParametre" Content="Paramètres" HorizontalAlignment="Center" Margin="0,344,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
-        <Image x:Name="imgJouer" Source="/img/BoutonJouer.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,179,0,0" Width="286" Height="80"/>
-        <Image x:Name="imgRegles" Source="/img/BoutonRegles.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Width="335" Height="80" Margin="226,254,0,0"/>
-        <Image x:Name="imgParametres" Source="/img/BoutonParametres.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="218,327,0,0" Width="354" Height="83"/>
+        <Button x:Name="butJouer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="50" Margin="140,225,0,0">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Image Margin="0,40,0,0" Source="/img/TitreAccueil-removebg-preview.png" Stretch="Fill" Width="350" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="butRegles" HorizontalAlignment="Left" Margin="450,225,0,0" VerticalAlignment="Top" Width="200" Height="50">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="butParametre" HorizontalAlignment="Left" Margin="450,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="butQuitter" HorizontalAlignment="Left" Margin="140,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </UserControl>
