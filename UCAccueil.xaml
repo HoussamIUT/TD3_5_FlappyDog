@@ -24,7 +24,7 @@
                 <ImageBrush ImageSource="/img/BoutonRegles_resized.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="butParametre" HorizontalAlignment="Left" Margin="450,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
+        <Button x:Name="butParametre" HorizontalAlignment="Left" Margin="454,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
@@ -32,7 +32,7 @@
                 <ImageBrush ImageSource="/img/BoutonQuitter_resized.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="butQuitter" HorizontalAlignment="Left" Margin="140,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
+        <Button x:Name="butQuitter" HorizontalAlignment="Left" Margin="127,320,0,0" VerticalAlignment="Top" Width="200" Height="50">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
