@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BoutonQuitter_resized.png" />
     <None Remove="img\BoutonJouer.png" />
     <None Remove="img\BoutonJouer_resized.png" />
     <None Remove="img\BoutonParametres.png" />
@@ -16,6 +17,7 @@
     <None Remove="img\BoutonQuitter_resized.png" />
     <None Remove="img\BoutonRegles.png" />
     <None Remove="img\BoutonRegles_resized.png" />
+    <None Remove="img\cadreregles.png" />
     <None Remove="img\Chien2AilesBasSansFond.png" />
     <None Remove="img\Chien2AilesHautSansFond.png" />
     <None Remove="img\Chien3AilesBasSansFond.png" />
@@ -31,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="BoutonQuitter_resized.png" />
     <Resource Include="img\BoutonJouer.png" />
     <Resource Include="img\BoutonJouer_resized.png" />
     <Resource Include="img\BoutonParametres.png" />
@@ -38,6 +41,7 @@
     <Resource Include="img\BoutonQuitter_resized.png" />
     <Resource Include="img\BoutonRegles.png" />
     <Resource Include="img\BoutonRegles_resized.png" />
+    <Resource Include="img\cadreregles.png" />
     <Resource Include="img\Chien2AilesBasSansFond.png" />
     <Resource Include="img\Chien2AilesHautSansFond.png" />
     <Resource Include="img\Chien3AilesBasSansFond.png" />
