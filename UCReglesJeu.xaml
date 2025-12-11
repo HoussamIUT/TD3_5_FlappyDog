@@ -10,6 +10,12 @@
         <Image Source="/img/cadreregles.png" Stretch="Fill" Canvas.Left="72" Canvas.Top="-127" Height="705" Width="656"/>
         <Label FontFamily="Felix Titling" Content="le but est de guider le petit chien à travers une série d'os sans le faire&#xA;       percuter. Si vous touchez un os, c'est la fin du jeu. Devant les os &#xA;                       peuvent apparaitre des malus, faites attention !&#xA;      L'objectif principal est de survivre le plus longtemps possible et&#xA;                        d'obtenir le meilleur score possible ! Bon jeu !&#xA;" Canvas.Left="151" Canvas.Top="177" Height="82" Width="498" HorizontalAlignment="Center" VerticalAlignment="Top" />
         <Button Content="" Canvas.Left="346" Canvas.Top="259" Height="31" Width="112">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
             <Button.Background>
                 <ImageBrush ImageSource="/BoutonQuitter_resized.png"/>
             </Button.Background>

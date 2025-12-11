@@ -47,8 +47,6 @@ namespace FlappyDog
             UCReglesJeu uc = new UCReglesJeu();
             ZoneJeu.Content = uc;
         }
-
-
     }
     //
 }
