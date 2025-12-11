@@ -34,6 +34,7 @@ namespace FlappyDog
             UCChoixSkin uc = new UCChoixSkin();
             ZoneJeu.Content = uc;
             uc.butDemarrer.Click += AfficherJeu;
+            uc.butRetour.Click += AfficherAccueilRegle;
         }
 
         private void AfficherJeu(object sender, RoutedEventArgs e)

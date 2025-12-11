@@ -26,6 +26,18 @@
             </RadioButton.Content>
         </RadioButton>
         <Button x:Name="butDemarrer" Content="Démarrer" Margin="0,350,0,0" IsEnabled="False" Width="150" Height="50"/>
+        <Button x:Name="butRetour" Content="" Canvas.Left="346" Canvas.Top="259" Height="34" Width="108" Margin="41,383,651,33">
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/BoutonRetour_final_resized-Photoroom.png"/>
+            </Button.Background>
+        </Button>
+
 
     </Grid>
 </UserControl>
