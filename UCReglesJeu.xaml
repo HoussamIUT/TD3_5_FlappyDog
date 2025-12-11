@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:FlappyDog"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas>
-        <Image Source="/img/cadreregles.png" Stretch="Fill" Canvas.Left="72" Canvas.Top="-127" Height="705" Width="656"/>
-        <Label FontFamily="Felix Titling" Content="le but est de guider le petit chien à travers une série d'os sans le faire&#xA;       percuter. Si vous touchez un os, c'est la fin du jeu. Devant les os &#xA;                       peuvent apparaitre des malus, faites attention !&#xA;      L'objectif principal est de survivre le plus longtemps possible et&#xA;                        d'obtenir le meilleur score possible ! Bon jeu !&#xA;" Canvas.Left="151" Canvas.Top="177" Height="82" Width="498" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <Button x:Name="butRetour" Content="" Canvas.Left="346" Canvas.Top="259" Height="34" Width="108" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Image Source="/img/cadreregles.png" Stretch="Fill" Canvas.Left="72" Canvas.Top="-127" Height="705" Width="656" Margin="72,-128,72,-128"/>
+        <Label FontFamily="Felix Titling" Content="le but est de guider le petit chien à travers une série d'os sans le faire&#xA;       percuter. Si vous touchez un os, c'est la fin du jeu. Devant les os &#xA;                       peuvent apparaitre des malus, faites attention !&#xA;      L'objectif principal est de survivre le plus longtemps possible et&#xA;                        d'obtenir le meilleur score possible ! Bon jeu !&#xA;" Canvas.Left="151" Canvas.Top="177" Height="82" Width="498" Margin="0,-30,0,0" />
+        <Button x:Name="butRetour" Content="" Canvas.Left="346" Canvas.Top="259" Height="34" Width="108" Margin="0,100,0,0">
             <Button.Foreground>
                 <ImageBrush/>
             </Button.Foreground>
@@ -21,5 +21,5 @@
             </Button.Background>
         </Button>
 
-    </Canvas>
+    </Grid>
 </UserControl>
