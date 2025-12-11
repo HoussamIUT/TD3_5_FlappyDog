@@ -24,5 +24,10 @@ namespace FlappyDog
         {
             InitializeComponent();
         }
+
+        private void butRetour_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
