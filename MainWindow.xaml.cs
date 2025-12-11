@@ -50,7 +50,6 @@ namespace FlappyDog
         }
         private void AfficherAccueilRegle(object sender, RoutedEventArgs e)
         {
-            // --- ET ICI ON REVIENT A L'ACCUEIL ---
             AfficheAccueil();
         }
     }
