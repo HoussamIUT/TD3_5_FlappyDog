@@ -46,6 +46,12 @@ namespace FlappyDog
         {
             UCReglesJeu uc = new UCReglesJeu();
             ZoneJeu.Content = uc;
+            uc.butRetour.Click += AfficherAccueilRegle;
+        }
+        private void AfficherAccueilRegle(object sender, RoutedEventArgs e)
+        {
+            // --- ET ICI ON REVIENT A L'ACCUEIL ---
+            AfficheAccueil();
         }
     }
     //
