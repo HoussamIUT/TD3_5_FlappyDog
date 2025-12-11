@@ -31,5 +31,21 @@ namespace FlappyDog
         {
             AilesHautSansFond = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
         }
+        private static bool saut;
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                saut = true;
+        }
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                saut = false;
+        }
+        private void Jeu(object? sender, EventArgs e)
+        {
+            if (saut)
+                Canvas.SetBottom(imgChien, Canvas.GetBottom(imgChien) + 2);
+        }
     }
 }
