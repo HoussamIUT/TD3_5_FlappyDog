@@ -27,17 +27,17 @@ namespace FlappyDog
         private void rbSkin1_Click(object sender, RoutedEventArgs e)
         {
             butDemarrer.IsEnabled = true;
-            MainWindow.Perso = "Skin1";
+            MainWindow.Perso = "AilesHautSansFond";
         }
         private void rbSkin2_Click(object sender, RoutedEventArgs e)
         {
             butDemarrer.IsEnabled = true;
-            MainWindow.Perso = "Skin2";
+            MainWindow.Perso = "2AilesHautSansFond";
         }
         private void rbSkin3_Click(object sender, RoutedEventArgs e)
         {
             butDemarrer.IsEnabled = true;
-            MainWindow.Perso = "Skin3";
+            MainWindow.Perso = "3AilesHautSansFond";
         }
     }
 }
