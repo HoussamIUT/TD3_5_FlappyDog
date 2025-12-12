@@ -22,21 +22,26 @@ namespace FlappyDog
     public partial class UCJeu : UserControl
     {
         private bool saut = false;
-        private DispatcherTimer gameTimer = new DispatcherTimer();
+        private static DispatcherTimer minuterie;
         private double gravite = 0.5;
         private double vitesseChien = 0;
-        private const double ForceSaut = -10;
+        private static readonly double ForceSaut = -10;
         private static BitmapImage AilesHautSansFond;
-
         public UCJeu()
         {
             InitializeComponent();
             ChargeImagesHauts();
+            InitializeTimer();
             imgChien.Source = AilesHautSansFond;
-            gameTimer.Interval = TimeSpan.FromMilliseconds(4);
-            gameTimer.Tick += Jeu;
-            gameTimer.Start();
         }
+        private void InitializeTimer()
+        {
+            minuterie = new DispatcherTimer();
+            minuterie.Interval = TimeSpan.FromMilliseconds(4);
+            minuterie.Tick += Jeu;
+            minuterie.Start();
+        }
+
         private void ChargeImagesHauts()
         {
             AilesHautSansFond = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
@@ -45,8 +50,7 @@ namespace FlappyDog
         {
             Application.Current.MainWindow.KeyDown += canvasJeu_KeyDown;
             Application.Current.MainWindow.KeyUp += canvasJeu_KeyUp;
-        }
-        
+        }    
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
