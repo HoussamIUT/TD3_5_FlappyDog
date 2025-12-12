@@ -38,13 +38,13 @@ namespace FlappyDog
         }
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            Application.Cut.MainWindow.KeyUp += canvasJeu_KeyUp;
+            Application.Current.MainWindow.KeyDown += canvasJeu_KeyDown;
+            Application.Current.MainWindow.KeyUp += canvasJeu_KeyUp;
         }
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
                 Canvas.SetTop(imgChien, Canvas.GetTop(imgChien) - 10);
-            // à completer
             #if DEBUG
             Console.WriteLine("Position Top chien :" + Canvas.GetTop(imgChien));
             #endif
