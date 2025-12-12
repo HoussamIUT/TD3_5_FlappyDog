@@ -21,19 +21,21 @@ namespace FlappyDog
     /// </summary>
     public partial class UCJeu : UserControl
     {
+        private bool saut = false;
         private DispatcherTimer gameTimer = new DispatcherTimer();
+        private double gravite = 0.5;
+        private double vitesseChien = 0;
+        private const double ForceSaut = -10;
         private static BitmapImage AilesHautSansFond;
-        public int nb;
-        public BitmapImage[] chiens;
-        private static BitmapImage ChienAilesHautSansFond;
-        private static BitmapImage PereNoelDroit;
 
         public UCJeu()
         {
             InitializeComponent();
             ChargeImagesHauts();
             imgChien.Source = AilesHautSansFond;
-            gameTimer.Interval = TimeSpan.FromMilliseconds(16);     
+            gameTimer.Interval = TimeSpan.FromMilliseconds(4);
+            gameTimer.Tick += Jeu;
+            gameTimer.Start();
         }
         private void ChargeImagesHauts()
         {
@@ -44,17 +46,27 @@ namespace FlappyDog
             Application.Current.MainWindow.KeyDown += canvasJeu_KeyDown;
             Application.Current.MainWindow.KeyUp += canvasJeu_KeyUp;
         }
+        
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
-                Canvas.SetTop(imgChien, Canvas.GetTop(imgChien) - 10);
-            #if DEBUG
-            Console.WriteLine("Position Top chien :" + Canvas.GetTop(imgChien));
-            #endif
+                saut = true;
         }
         private void canvasJeu_KeyUp(object sender, KeyEventArgs e)
         {
-            Canvas.SetTop(imgChien, Canvas.GetTop(imgChien) + 10);
+            if (e.Key == Key.Space)
+                saut = false;
+        }
+        private void Jeu(object? sender, EventArgs e)
+        {
+            if (saut)
+            {
+                vitesseChien = ForceSaut;
+                saut = false;
+            }
+            vitesseChien += gravite;
+            double nouvellePosY = Canvas.GetTop(imgChien) + vitesseChien;
+            Canvas.SetTop(imgChien, nouvellePosY);
         }
     }
 }
