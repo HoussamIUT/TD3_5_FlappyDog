@@ -25,6 +25,9 @@ namespace FlappyDog
         private static BitmapImage AilesHautSansFond;
         public int nb;
         public BitmapImage[] chiens;
+        private static BitmapImage ChienAilesHautSansFond;
+        private static BitmapImage PereNoelDroit;
+
         public UCJeu()
         {
             InitializeComponent();
