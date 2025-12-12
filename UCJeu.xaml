@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:FlappyDog"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Focusable="True"          KeyDown="UCJeu_KeyDown" >
+             Focusable="True" Loaded="UserControl_Loaded" >
     <Canvas>
-        <Image x:Name="imgChien" Source="/img/ChienAilesHautSansFond.png" Stretch="Fill"  Width="80" Height="50" Canvas.Left="100"  Canvas.Top="250"/>
+        <Image x:Name="imgChien" Source="/img/Chien1AilesHautSansFond.png" Stretch="Fill"  Width="80" Height="50" Canvas.Left="100"  Canvas.Top="250"/>
 
     </Canvas>
 </UserControl>

@@ -10,7 +10,7 @@
         <Label Content="Choix du personnage" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,78,0,0" FontSize="20" FontWeight="Bold" Foreground="White"/>
         <RadioButton x:Name="rbSkin1" Click="rbSkin1_Click" Width="150" Height="150" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,47,350,0">
             <RadioButton.Content>
-                <Image Source="/img/ChienAilesHautSansFond.png" Width="150" Height="150"/>
+                <Image Source="/img/Chien1AilesHautSansFond.png" Width="150" Height="150"/>
             </RadioButton.Content>
         </RadioButton>
 

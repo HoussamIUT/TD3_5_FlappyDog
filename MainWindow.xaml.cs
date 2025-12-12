@@ -17,6 +17,8 @@ namespace FlappyDog
     public partial class MainWindow : Window
     {
         public static string Perso { get; set; }
+        public static int SautPereNoel { get; set; } = 2;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -52,7 +54,6 @@ namespace FlappyDog
         private void AfficherAccueilRegle(object sender, RoutedEventArgs e)
         {
             AfficheAccueil();
-        }
+        }  
     }
-    //
 }

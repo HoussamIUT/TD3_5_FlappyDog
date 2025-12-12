@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace FlappyDog
 {
@@ -20,43 +21,37 @@ namespace FlappyDog
     /// </summary>
     public partial class UCJeu : UserControl
     {
+        private DispatcherTimer gameTimer = new DispatcherTimer();
         private static BitmapImage AilesHautSansFond;
+        public int nb;
+        public BitmapImage[] chiens;
         public UCJeu()
         {
             InitializeComponent();
             ChargeImagesHauts();
             imgChien.Source = AilesHautSansFond;
-            this.Focusable = true;
-            this.Focus();
+            gameTimer.Interval = TimeSpan.FromMilliseconds(16);     
         }
         private void ChargeImagesHauts()
         {
             AilesHautSansFond = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
         }
-        private static bool saut;
-        private void UCJeu_KeyDown(object sender, KeyEventArgs e)
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            Application.Cut.MainWindow.KeyUp += canvasJeu_KeyUp;
+        }
+        private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
-                saut = true;
+                Canvas.SetTop(imgChien, Canvas.GetTop(imgChien) - 10);
+            // à completer
+            #if DEBUG
+            Console.WriteLine("Position Top chien :" + Canvas.GetTop(imgChien));
+            #endif
         }
-        private void UCJeu_KeyUp(object sender, KeyEventArgs e)
+        private void canvasJeu_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Space)
-                saut = false;
+            Canvas.SetTop(imgChien, Canvas.GetTop(imgChien) + 10);
         }
-        private void Jeu(object? sender, EventArgs e)
-        {
-            if (saut)
-                Canvas.SetTop(imgChien, Canvas.GetTop(imgChien) - 1);
-        }
-        public int nb;
-        public BitmapImage[] chiens;
-        private void InitImages()
-        {
-            chiens = new BitmapImage[3];
-            for (int i = 0; i < 3; i++)
-                chiens[i] = new BitmapImage(new Uri($"pack://application:,,,/img/newRunner_0{i + 1}.gif"));
-        }
-
     }
 }
