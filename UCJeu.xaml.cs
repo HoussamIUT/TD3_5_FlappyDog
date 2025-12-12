@@ -26,18 +26,20 @@ namespace FlappyDog
             InitializeComponent();
             ChargeImagesHauts();
             imgChien.Source = AilesHautSansFond;
+            this.Focusable = true;
+            this.Focus();
         }
         private void ChargeImagesHauts()
         {
             AilesHautSansFond = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
         }
         private static bool saut;
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        private void UCJeu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
                 saut = true;
         }
-        private void Window_KeyUp(object sender, KeyEventArgs e)
+        private void UCJeu_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
                 saut = false;
@@ -45,7 +47,16 @@ namespace FlappyDog
         private void Jeu(object? sender, EventArgs e)
         {
             if (saut)
-                Canvas.SetBottom(imgChien, Canvas.GetBottom(imgChien) + 2);
+                Canvas.SetTop(imgChien, Canvas.GetTop(imgChien) - 1);
         }
+        public int nb;
+        public BitmapImage[] chiens;
+        private void InitImages()
+        {
+            chiens = new BitmapImage[3];
+            for (int i = 0; i < 3; i++)
+                chiens[i] = new BitmapImage(new Uri($"pack://application:,,,/img/newRunner_0{i + 1}.gif"));
+        }
+
     }
 }
