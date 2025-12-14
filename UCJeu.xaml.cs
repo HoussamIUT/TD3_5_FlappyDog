@@ -30,7 +30,8 @@ namespace FlappyDog
         private static BitmapImage AilesHaut;
         private static BitmapImage AilesBas;
         private int timerAnimationAiles = 0;
-
+        private double vitesseOs = 3;
+        private List<Image> lesOs = new List<Image>();
         private SoundPlayer sonSaut;
 
         public UCJeu()
@@ -39,6 +40,7 @@ namespace FlappyDog
             ChargeImages(); 
             InitializeSons();
             InitializeTimer();
+            InitializeOs();
 
             imgChien.Source = AilesHaut;
         }
@@ -106,7 +108,39 @@ namespace FlappyDog
             vitesseChien += gravite;
             double nouvellePosY = Canvas.GetTop(imgChien) + vitesseChien;
             Canvas.SetTop(imgChien, nouvellePosY);
+
+            foreach (Image os in lesOs)
+            {
+                Deplace(os, (int)vitesseOs);
+            }
         }
+        
+        private void InitializeOs()
+        {
+            lesOs.Add(osHaut1);
+            lesOs.Add(osBas1);
+            lesOs.Add(osHaut2);
+            lesOs.Add(osBas2);
+            lesOs.Add(osHaut3);
+            lesOs.Add(osBas3);
+            lesOs.Add(osHaut4);
+            lesOs.Add(osBas4);
+            lesOs.Add(osHaut5);
+            lesOs.Add(osBas5);
+        }
+        private void Deplace(Image image, int pas)
+        {
+            Canvas.SetLeft(image, Canvas.GetLeft(image) - pas);
+
+            if (Canvas.GetLeft(image) + image.ActualWidth <= 0)
+            {
+                Canvas.SetLeft(image, canvasJeu.ActualWidth + 250);
+            }
+        }
+
+
+
+
 
         private void InitializeSons()
         {
