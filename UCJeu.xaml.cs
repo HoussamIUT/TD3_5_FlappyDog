@@ -116,6 +116,7 @@ namespace FlappyDog
                 if (streamInfo != null)
                 {
                     sonSaut = new SoundPlayer(streamInfo.Stream);
+                    sonSaut.Load();
                 }
 
 
