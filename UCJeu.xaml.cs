@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,10 +28,13 @@ namespace FlappyDog
         private double vitesseChien = 0;
         private static readonly double ForceSaut = -10;
         private static BitmapImage AilesHautSansFond;
+        private SoundPlayer sonSaut;
+
         public UCJeu()
         {
             InitializeComponent();
             ChargeImagesHauts();
+            InitializeSons();
             InitializeTimer();
             imgChien.Source = AilesHautSansFond;
         }
@@ -67,10 +71,26 @@ namespace FlappyDog
             {
                 vitesseChien = ForceSaut;
                 saut = false;
+
+                if (sonSaut != null)
+                {
+                    sonSaut.Stop();
+                    sonSaut.Play();
+                }
             }
             vitesseChien += gravite;
             double nouvellePosY = Canvas.GetTop(imgChien) + vitesseChien;
             Canvas.SetTop(imgChien, nouvellePosY);
+        }
+        private void InitializeSons()
+        {
+            Uri uriSon = new Uri("pack://application:,,,/sons/flap.wav");
+            var streamInfo = Application.GetResourceStream(uriSon);
+
+            if (streamInfo != null)
+            {
+                sonSaut = new SoundPlayer(streamInfo.Stream);
+            }
         }
     }
 }

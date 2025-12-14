@@ -56,7 +56,9 @@
     <Resource Include="img\OsHaut-removebg-preview.png" />
     <Resource Include="img\TitreAccueil-removebg-preview.png" />
     <Resource Include="img\wp6956942.jpg" />
-    <Resource Include="sons\flap.wav" />
+    <Resource Include="sons\flap.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="wp6956942.jpg" />
   </ItemGroup>
 
