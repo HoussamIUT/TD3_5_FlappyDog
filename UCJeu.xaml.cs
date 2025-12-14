@@ -27,17 +27,22 @@ namespace FlappyDog
         private double gravite = 0.5;
         private double vitesseChien = 0;
         private static readonly double ForceSaut = -10;
-        private static BitmapImage AilesHautSansFond;
+        private static BitmapImage AilesHaut;
+        private static BitmapImage AilesBas;
+        private int timerAnimationAiles = 0;
+
         private SoundPlayer sonSaut;
 
         public UCJeu()
         {
             InitializeComponent();
-            ChargeImagesHauts();
+            ChargeImages(); 
             InitializeSons();
             InitializeTimer();
-            imgChien.Source = AilesHautSansFond;
+
+            imgChien.Source = AilesHaut;
         }
+
         private void InitializeTimer()
         {
             minuterie = new DispatcherTimer();
@@ -46,25 +51,32 @@ namespace FlappyDog
             minuterie.Start();
         }
 
-        private void ChargeImagesHauts()
+        private void ChargeImages()
         {
-            AilesHautSansFond = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
+            AilesHaut = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
+            string nomPersoBas = MainWindow.Perso.Replace("Haut", "");
+            AilesBas = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{nomPersoBas}Bas.png"));
+            
         }
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.KeyDown += canvasJeu_KeyDown;
             Application.Current.MainWindow.KeyUp += canvasJeu_KeyUp;
-        }    
+        }
+
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
                 saut = true;
         }
+
         private void canvasJeu_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
                 saut = false;
         }
+
         private void Jeu(object? sender, EventArgs e)
         {
             if (saut)
@@ -77,20 +89,36 @@ namespace FlappyDog
                     sonSaut.Stop();
                     sonSaut.Play();
                 }
+
+                imgChien.Source = AilesBas;
+                timerAnimationAiles = 15;
             }
+
+            if (timerAnimationAiles > 0)
+            {
+                timerAnimationAiles--;
+            }
+            else
+            {
+                imgChien.Source = AilesHaut;
+            }
+
             vitesseChien += gravite;
             double nouvellePosY = Canvas.GetTop(imgChien) + vitesseChien;
             Canvas.SetTop(imgChien, nouvellePosY);
         }
+
         private void InitializeSons()
         {
-            Uri uriSon = new Uri("pack://application:,,,/sons/flap.wav");
-            var streamInfo = Application.GetResourceStream(uriSon);
+                Uri uriSon = new Uri("pack://application:,,,/sons/flap.wav");
+                var streamInfo = Application.GetResourceStream(uriSon);
 
-            if (streamInfo != null)
-            {
-                sonSaut = new SoundPlayer(streamInfo.Stream);
-            }
+                if (streamInfo != null)
+                {
+                    sonSaut = new SoundPlayer(streamInfo.Stream);
+                }
+
+
         }
     }
 }
