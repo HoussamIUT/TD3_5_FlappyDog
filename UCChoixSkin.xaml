@@ -25,9 +25,9 @@
                 <Image Source="/img/Chien3AilesHaut.png" Width="150" Height="150"/>
             </RadioButton.Content>
         </RadioButton>
-        <Button x:Name="butDemarrer" Content="Démarrer" Margin="0,350,0,0" IsEnabled="False" Width="150" Height="50">
+        <Button x:Name="butDemarrer" Content="" Margin="0,350,0,0" IsEnabled="False" Width="150" Height="50">
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="/BoutonJouer_resized.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
         <Button x:Name="butRetour" Content="" Canvas.Left="346" Canvas.Top="259" Height="34" Margin="34,383,667,33">
