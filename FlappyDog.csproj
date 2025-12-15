@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BoutonJouer_resized.png" />
     <None Remove="BoutonQuitter_resized.png" />
     <None Remove="BoutonRetour_final_resized-Photoroom.png" />
     <None Remove="img\BoutonJouer.png" />
@@ -33,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="BoutonJouer_resized.png" />
     <Resource Include="BoutonQuitter_resized.png" />
     <Resource Include="BoutonRetour_final_resized-Photoroom.png" />
     <Resource Include="img\BoutonJouer.png" />
