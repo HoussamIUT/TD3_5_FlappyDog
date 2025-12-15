@@ -7,8 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Focusable="True" Loaded="UserControl_Loaded" >
-    <Canvas>
-        <Image x:Name="imgChien" Source="/img/Chien1AilesHautSansFond.png" Stretch="Fill"  Width="80" Height="50" Canvas.Left="100"  Canvas.Top="250"/>
+    <Canvas x:Name="canvasJeu">
+        <Image x:Name="imgChien" Source="/img/Chien1AilesHaut.png" Stretch="Fill"  Width="80" Height="50" Canvas.Left="100"  Canvas.Top="250"/>
+
+        <Image x:Name="osHaut1" Source="/img/OsHaut.png" Canvas.Left="218" Canvas.Top="-130" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="osBas1" Source="/img/osBas.png" Canvas.Left="218" Canvas.Top="275" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Image x:Name="osHaut2" Source="/img/OsHaut.png" Canvas.Left="475" Canvas.Top="-58" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="osBas2" Source="/img/osBas.png" Canvas.Left="475" Canvas.Top="350" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Image x:Name="osHaut3" Source="/img/OsHaut.png" Canvas.Left="718" Canvas.Top="-130" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Image x:Name="osBas3" Source="/img/osBas.png" Canvas.Left="718" Canvas.Top="275" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Image x:Name="osHaut4" Source="/img/OsHaut.png" Canvas.Left="984" Canvas.Top="-203" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="osBas4" Source="/img/OsBas.png" Canvas.Left="984" Canvas.Top="202" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Image x:Name="osHaut5" Source="/img/OsHaut.png" Canvas.Left="1221" Canvas.Top="-85" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="osBas5" Source="/img/OsBas.png" Canvas.Left="1221" Canvas.Top="320" Width="201" Height="296" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Canvas>
 </UserControl>
