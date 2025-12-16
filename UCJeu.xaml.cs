@@ -26,7 +26,7 @@ namespace FlappyDog
         private static DispatcherTimer minuterie;
         private double gravite = 0.5;
         private double vitesseChien = 0;
-        private static readonly double ForceSaut = -10;
+        private static readonly double ForceSaut = -8;
         private static BitmapImage AilesHaut;
         private static BitmapImage AilesBas;
         private int timerAnimationAiles = 0;
