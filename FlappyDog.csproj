@@ -46,6 +46,7 @@
     <None Remove="img\TitreAccueil-removebg-preview.png" />
     <None Remove="img\TitreAccueil.png" />
     <None Remove="img\wp6956942.jpg" />
+    <None Remove="sons\collision.wav" />
     <None Remove="sons\flap %28mp3cut.net%29.mp3" />
     <None Remove="sons\flap.wav" />
     <None Remove="wp6956942.jpg" />
@@ -86,6 +87,7 @@
     <Resource Include="img\saucisseFeu.png" />
     <Resource Include="img\TitreAccueil-removebg-preview.png" />
     <Resource Include="img\wp6956942.jpg" />
+    <Resource Include="sons\collision.wav" />
     <Resource Include="sons\flap.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

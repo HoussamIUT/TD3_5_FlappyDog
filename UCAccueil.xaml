@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="butJouer" Width="200" Height="50" Margin="0,50,310,0">
+        <Button x:Name="butJouer" Height="50" Margin="293,225,300,175">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
@@ -16,7 +16,7 @@
             </Button.Background>
         </Button>
         <Image Margin="0,40,0,0" Source="/img/TitreAccueil-removebg-preview.png" Stretch="Fill" Width="350" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button x:Name="butRegles" Margin="300,50,0,0" Width="200" Height="50">
+        <Button x:Name="butRegles" Margin="265,270,300,130" Height="50">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
@@ -24,20 +24,12 @@
                 <ImageBrush ImageSource="/img/BoutonRegles_resized.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="butParametre" Click="Quitter_Click" Margin="300,250,0,0" Width="200" Height="50">
+        <Button x:Name="butParametre" Click="Quitter_Click" Margin="265,325,300,75" Height="50">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
                 <ImageBrush ImageSource="/img/BoutonQuitter_resized.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="butQuitter" Margin="0,250,330,0" Width="200" Height="50">
-            <Button.BorderBrush>
-                <ImageBrush/>
-            </Button.BorderBrush>
-            <Button.Background>
-                <ImageBrush ImageSource="/img/BoutonParametres_resized.png"/>
             </Button.Background>
         </Button>
 

@@ -11,13 +11,19 @@
         <Image Margin="254,167,254,239" Source="/img/gameover.png" Stretch="Fill"/>
         <Button x:Name="butRejouer" 
                     FontSize="24"
-                    Margin="506,258,174,155"
+                    Margin="469,258,183,155"
                     Click="butRejouer_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/BoutonJouer_resized.png"/>
             </Button.Background>
         </Button>
-
+        <Label x:Name="lblScoreFinal" 
+                   Content="Score : 0" 
+                   FontSize="26" 
+                   FontWeight="Bold" 
+                   Foreground="Black"
+                   HorizontalAlignment="Center"
+                   Margin="0,225,0,167"/>
         <Button x:Name="butMenu" FontSize="24" Margin="212,263,500,160" Click="butRetour_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/BoutonRetour_final_resized-Photoroom.png"/>

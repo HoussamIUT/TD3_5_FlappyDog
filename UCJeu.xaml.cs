@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Drawing;
 
+
 namespace FlappyDog
 {
     /// <summary>
@@ -34,6 +35,15 @@ namespace FlappyDog
         private double vitesseOs = 3;
         private List<Image> lesOs = new List<Image>();
         private SoundPlayer sonSaut;
+        private SoundPlayer sonCollision;
+        private int score = 0;
+        private bool osHaut1Depasse = false;
+        private bool osHaut2Depasse = false;
+        private bool osHaut3Depasse = false;
+        private bool osHaut4Depasse = false;
+        private bool osHaut5Depasse = false;
+
+
 
         public UCJeu()
         {
@@ -108,6 +118,21 @@ namespace FlappyDog
 
             vitesseChien += gravite;
             double nouvellePosY = Canvas.GetTop(imgChien) + vitesseChien;
+            double limiteSol = (imgFond1.ActualHeight - 80) - imgChien.ActualHeight;
+            if (nouvellePosY < 0)
+            {
+                Canvas.SetTop(imgChien, 0);
+                vitesseChien = 0;
+            }
+            else if (nouvellePosY > limiteSol)
+            {
+                minuterie.Stop();
+                AfficherGameOver();
+            }
+            else
+            {
+                Canvas.SetTop(imgChien, nouvellePosY);
+            }
             Canvas.SetTop(imgChien, nouvellePosY);
 
             foreach (Image os in lesOs)
@@ -116,15 +141,72 @@ namespace FlappyDog
 
                 if (DetecterCollision(imgChien, os))
                 {
-                    // Arrêter le jeu
+                    sonCollision.Stop();
+                    sonCollision.Play();
+
                     minuterie.Stop();
-
-                    // Afficher l'écran Game Over
                     AfficherGameOver();
-
-                    return; // Sortir de la méthode
+                    return;
                 }
             }
+            Canvas.SetLeft(imgFond1, Canvas.GetLeft(imgFond1) - 2);
+            if (Canvas.GetLeft(imgFond1) + imgFond1.ActualWidth <= 0)
+                Canvas.SetLeft(imgFond1, canvasJeu.ActualWidth);
+
+            Canvas.SetLeft(imgFond2, Canvas.GetLeft(imgFond2) - 2);
+            if (Canvas.GetLeft(imgFond2) + imgFond2.ActualWidth <= 0)
+                Canvas.SetLeft(imgFond2, canvasJeu.ActualWidth);
+
+            if (Canvas.GetLeft(imgChien) > Canvas.GetLeft(osHaut1) + osHaut1.ActualWidth && !osHaut1Depasse)
+            {
+                score++;
+                lblScore.Content = score.ToString();
+                osHaut1Depasse = true;
+            }
+
+            if (Canvas.GetLeft(imgChien) > Canvas.GetLeft(osHaut2) + osHaut2.ActualWidth && !osHaut2Depasse)
+            {
+                score++;
+                lblScore.Content = score.ToString();
+                osHaut2Depasse = true;
+            }
+
+            if (Canvas.GetLeft(imgChien) > Canvas.GetLeft(osHaut3) + osHaut3.ActualWidth && !osHaut3Depasse)
+            {
+                score++;
+                lblScore.Content = score.ToString();
+                osHaut3Depasse = true;
+            }
+
+            if (Canvas.GetLeft(imgChien) > Canvas.GetLeft(osHaut4) + osHaut4.ActualWidth && !osHaut4Depasse)
+            {
+                score++;
+                lblScore.Content = score.ToString();
+                osHaut4Depasse = true;
+            }
+
+            if (Canvas.GetLeft(imgChien) > Canvas.GetLeft(osHaut5) + osHaut5.ActualWidth && !osHaut5Depasse)
+            {
+                score++;
+                lblScore.Content = score.ToString();
+                osHaut5Depasse = true;
+            }
+
+            if (Canvas.GetLeft(osHaut1) >= canvasJeu.ActualWidth - 10)
+                osHaut1Depasse = false;
+
+            if (Canvas.GetLeft(osHaut2) >= canvasJeu.ActualWidth - 10)
+                osHaut2Depasse = false;
+
+            if (Canvas.GetLeft(osHaut3) >= canvasJeu.ActualWidth - 10)
+                osHaut3Depasse = false;
+
+            if (Canvas.GetLeft(osHaut4) >= canvasJeu.ActualWidth - 10)
+                osHaut4Depasse = false;
+
+            if (Canvas.GetLeft(osHaut5) >= canvasJeu.ActualWidth - 10)
+                osHaut5Depasse = false;
+
         }
 
         private bool DetecterCollision(Image img1, Image img2)
@@ -152,7 +234,7 @@ namespace FlappyDog
 
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
 
-            UCGameOver ucGameOver = new UCGameOver();
+            UCGameOver ucGameOver = new UCGameOver(score);
             mainWindow.ZoneJeu.Content = ucGameOver;
         }
         private void InitializeOs()
@@ -167,6 +249,8 @@ namespace FlappyDog
             lesOs.Add(osBas4);
             lesOs.Add(osHaut5);
             lesOs.Add(osBas5);
+
+
         }
         private void Deplace(Image image, int pas)
         {
@@ -193,7 +277,17 @@ namespace FlappyDog
                     sonSaut.Load();
                 }
 
+                Uri uriSonCollision = new Uri("pack://application:,,,/sons/collision.wav");
+                var streamInfoCollision = Application.GetResourceStream(uriSonCollision);
+
+                if (streamInfoCollision != null)
+                {
+                sonCollision = new SoundPlayer(streamInfoCollision.Stream);
+                sonCollision.Load();
+                }
 
         }
+
+
     }
 }

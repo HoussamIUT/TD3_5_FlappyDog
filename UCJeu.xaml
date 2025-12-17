@@ -8,22 +8,28 @@
              d:DesignHeight="450" d:DesignWidth="800"
              Focusable="True" Loaded="UserControl_Loaded" >
     <Canvas x:Name="canvasJeu">
-        <Image x:Name="imgChien" Source="/img/Chien1AilesHaut.png" Stretch="Fill"  Width="52" Height="38" Canvas.Left="100"  Canvas.Top="250"/>
+        <Image x:Name="imgFond2" Height="500" Canvas.Left="799" Canvas.Top="0" Source="/img/wp6956942.jpg" Stretch="Fill" Width="800" />
+        <Image x:Name="imgFond1" Height="500" Source="/img/wp6956942.jpg" Stretch="Fill" Width="800" Canvas.Left="0"  Canvas.Top="0" />
 
-        <Image x:Name="osHaut1" Source="/img/OsHaut1.png" Canvas.Left="218" Canvas.Top="-158" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Image x:Name="osBas1" Source="/img/OsBas1.png" Canvas.Left="218" Canvas.Top="302" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="labelScore" Content="Score: " FontSize="24" Foreground="White"  Margin="10"/>
+        <Label x:Name="lblScore" Content="0" FontSize="24" Foreground="White"  Canvas.Left="86" Canvas.Top="10"/>
 
-        <Image x:Name="osHaut2" Source="/img/OsHaut1.png" Canvas.Left="475" Canvas.Top="-104" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Image x:Name="osBas2" Source="/img/OsBas1.png" Canvas.Left="475" Canvas.Top="372" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Image x:Name="imgChien" Source="/img/Chien1AilesHaut.png" Stretch="Fill"  Width="52" Height="38" Canvas.Left="100"  Canvas.Top="206" />
 
-        <Image x:Name="osHaut3" Source="/img/OsHaut1.png" Canvas.Left="718" Canvas.Top="-174" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Image x:Name="osBas3" Source="/img/OsBas1.png" Canvas.Left="718" Canvas.Top="302" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Image x:Name="osHaut1" Source="/img/OsHaut1.png" Canvas.Left="218" Canvas.Top="-158" Width="70" Height="296" />
+        <Image x:Name="osBas1" Source="/img/OsBas1.png" Canvas.Left="218" Canvas.Top="302" Width="70" Height="296" />
 
-        <Image x:Name="osHaut4" Source="/img/OsHaut1.png" Canvas.Left="984" Canvas.Top="-233" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Image x:Name="osBas4" Source="/img/OsBas1.png" Canvas.Left="984" Canvas.Top="224" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Image x:Name="osHaut2" Source="/img/OsHaut1.png" Canvas.Left="475" Canvas.Top="-104" Width="70" Height="296" />
+        <Image x:Name="osBas2" Source="/img/OsBas1.png" Canvas.Left="475" Canvas.Top="372" Width="70" Height="296" />
 
-        <Image x:Name="osHaut5" Source="/img/OsHaut1.png" Canvas.Left="1221" Canvas.Top="-118" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Image x:Name="osBas5" Source="/img/OsBas1.png" Canvas.Left="1221" Canvas.Top="341" Width="70" Height="296" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Image x:Name="osHaut3" Source="/img/OsHaut1.png" Canvas.Left="718" Canvas.Top="-174" Width="70" Height="296" />
+        <Image x:Name="osBas3" Source="/img/OsBas1.png" Canvas.Left="718" Canvas.Top="302" Width="70" Height="296" />
+
+        <Image x:Name="osHaut4" Source="/img/OsHaut1.png" Canvas.Left="984" Canvas.Top="-233" Width="70" Height="296" />
+        <Image x:Name="osBas4" Source="/img/OsBas1.png" Canvas.Left="984" Canvas.Top="224" Width="70" Height="296" />
+
+        <Image x:Name="osHaut5" Source="/img/OsHaut1.png" Canvas.Left="1221" Canvas.Top="-118" Width="70" Height="296" />
+        <Image x:Name="osBas5" Source="/img/OsBas1.png" Canvas.Left="1221" Canvas.Top="341" Width="70" Height="296" />
 
     </Canvas>
 </UserControl>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="FlappyDog.MainWindow" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAEAAABAAAAAAAABAAAAAAAAAAAAAAAAAQgAAAQ=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlappyDog.UCAccueil" Collapsed="true">
+    <Position X="10" Y="3.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>UCAccueil.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlappyDog.UCChoixSkin" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAA=</HashCode>
+      <FileName>UCChoixSkin.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlappyDog.UCGameOver">
+    <Position X="0.75" Y="1.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>UCGameOver.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlappyDog.UCJeu" Collapsed="true">
+    <Position X="9.75" Y="6.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>CgBIALgAQAAgAgIAAAEIABBAAEAAIAGBAAAAEABAAAA=</HashCode>
+      <FileName>UCJeu.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlappyDog.UCReglesJeu" Collapsed="true">
+    <Position X="10" Y="2.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>UCReglesJeu.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

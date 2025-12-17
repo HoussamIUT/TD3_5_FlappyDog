@@ -17,9 +17,10 @@ namespace FlappyDog
 {
     public partial class UCGameOver : UserControl
     {
-        public UCGameOver()
+        public UCGameOver(int score)
         {
             InitializeComponent();
+            lblScoreFinal.Content = $"Score : {score}";
         }
 
         private void butRejouer_Click(object sender, RoutedEventArgs e)
