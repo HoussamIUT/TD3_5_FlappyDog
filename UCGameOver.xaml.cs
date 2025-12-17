@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace FlappyDog
 {
     /// <summary>
-    /// Logique d'interaction pour UCParametres.xaml
+    /// Logique d'interaction pour UCGameOver.xaml
     /// </summary>
-    public partial class UCParametres : UserControl
+    public partial class UCGameOver : UserControl
     {
-        public UCParametres()
+        public UCGameOver()
         {
             InitializeComponent();
         }
-
     }
 }
