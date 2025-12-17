@@ -10,11 +10,18 @@
         <Image Margin="120,-140,120,-140" Source="/img/cadreregles.png" Stretch="Fill"/>
         <Image Margin="254,167,254,239" Source="/img/gameover.png" Stretch="Fill"/>
         <Button x:Name="butRejouer" 
-                    Content="Rejouer" 
                     FontSize="24"
-                    Margin="497,253,216,160"
-                    Click="butRejouer_Click"/>
+                    Margin="506,258,174,155"
+                    Click="butRejouer_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/BoutonJouer_resized.png"/>
+            </Button.Background>
+        </Button>
 
-        <Button x:Name="butMenu" Content="Menu Principal" FontSize="24" Margin="212,252,501,160"/>
+        <Button x:Name="butMenu" FontSize="24" Margin="212,263,500,160">
+            <Button.Background>
+                <ImageBrush ImageSource="/BoutonRetour_final_resized-Photoroom.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>
