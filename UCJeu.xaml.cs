@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Drawing;
 
 namespace FlappyDog
 {
@@ -112,9 +113,48 @@ namespace FlappyDog
             foreach (Image os in lesOs)
             {
                 Deplace(os, (int)vitesseOs);
+
+                if (DetecterCollision(imgChien, os))
+                {
+                    // Arrêter le jeu
+                    minuterie.Stop();
+
+                    // Afficher l'écran Game Over
+                    AfficherGameOver();
+
+                    return; // Sortir de la méthode
+                }
             }
         }
-        
+
+        private bool DetecterCollision(Image img1, Image img2)
+        {
+            System.Drawing.Rectangle rect1 = new System.Drawing.Rectangle(
+                (int)Canvas.GetLeft(img1),
+                (int)Canvas.GetTop(img1),
+                (int)img1.ActualWidth,
+                (int)img1.ActualHeight
+            );
+
+            System.Drawing.Rectangle rect2 = new System.Drawing.Rectangle(
+                (int)Canvas.GetLeft(img2),
+                (int)Canvas.GetTop(img2),
+                (int)img2.ActualWidth,
+                (int)img2.ActualHeight
+            );
+
+            return rect1.IntersectsWith(rect2);
+        }
+
+
+        private void AfficherGameOver()
+        {
+
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            UCGameOver ucGameOver = new UCGameOver();
+            mainWindow.ZoneJeu.Content = ucGameOver;
+        }
         private void InitializeOs()
         {
             lesOs.Add(osHaut1);
@@ -138,7 +178,7 @@ namespace FlappyDog
             }
         }
 
-
+            
 
 
 

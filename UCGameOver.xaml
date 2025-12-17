@@ -8,6 +8,13 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Image Margin="120,-140,120,-140" Source="/img/cadreregles.png" Stretch="Fill"/>
+        <Image Margin="254,167,254,239" Source="/img/gameover.png" Stretch="Fill"/>
+        <Button x:Name="butRejouer" 
+                    Content="Rejouer" 
+                    FontSize="24"
+                    Margin="497,253,216,160"
+                    Click="butRejouer_Click"/>
 
+        <Button x:Name="butMenu" Content="Menu Principal" FontSize="24" Margin="212,252,501,160"/>
     </Grid>
 </UserControl>

@@ -15,14 +15,29 @@ using System.Windows.Shapes;
 
 namespace FlappyDog
 {
-    /// <summary>
-    /// Logique d'interaction pour UCGameOver.xaml
-    /// </summary>
     public partial class UCGameOver : UserControl
     {
         public UCGameOver()
         {
             InitializeComponent();
+        }
+
+        private void butRejouer_Click(object sender, RoutedEventArgs e)
+        {
+            // Relancer le jeu
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            UCJeu ucJeu = new UCJeu();
+            mainWindow.ZoneJeu.Content = ucJeu;
+        }
+
+        private void butMenu_Click(object sender, RoutedEventArgs e)
+        {
+            // Retourner au menu principal
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            UCAccueil ucAccueil = new UCAccueil();
+            mainWindow.ZoneJeu.Content = ucAccueil;
+            //ucAccueil.butJouer.Click += mainWindow.AfficherChoixPerso;
+            //ucAccueil.butRegles.Click += mainWindow.AfficherRegles;
         }
     }
 }
