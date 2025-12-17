@@ -14,7 +14,7 @@
         <Label x:Name="labelScore" Content="Score: " FontSize="24" Foreground="White"  Margin="10"/>
         <Label x:Name="lblScore" Content="0" FontSize="24" Foreground="White"  Canvas.Left="86" Canvas.Top="10"/>
 
-        <Image x:Name="imgChien" Source="/img/Chien1AilesHaut.png" Stretch="Fill"  Width="52" Height="38" Canvas.Left="100"  Canvas.Top="206" />
+        <Image x:Name="imgChien" Source="/img/Chien1AilesHaut.png" Stretch="Fill"  Width="52" Height="38" Canvas.Left="24"  Canvas.Top="154" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
         <Image x:Name="osHaut1" Source="/img/OsHaut1.png" Canvas.Left="218" Canvas.Top="-158" Width="70" Height="296" />
         <Image x:Name="osBas1" Source="/img/OsBas1.png" Canvas.Left="218" Canvas.Top="302" Width="70" Height="296" />
