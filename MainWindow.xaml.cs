@@ -31,7 +31,7 @@ namespace FlappyDog
             uc.butJouer.Click += AfficherChoixPerso;
             uc.butRegles.Click += AfficherRegles;
         }
-        private void AfficherChoixPerso(object sender, RoutedEventArgs e)
+        public void AfficherChoixPerso(object sender, RoutedEventArgs e)
         {
             UCChoixSkin uc = new UCChoixSkin();
             ZoneJeu.Content = uc;
@@ -45,7 +45,7 @@ namespace FlappyDog
             ZoneJeu.Content = uc;
         }
 
-        private void AfficherRegles(object sender, RoutedEventArgs e)
+        public void AfficherRegles(object sender, RoutedEventArgs e)
         {
             UCReglesJeu uc = new UCReglesJeu();
             ZoneJeu.Content = uc;

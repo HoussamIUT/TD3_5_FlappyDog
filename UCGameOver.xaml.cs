@@ -30,14 +30,13 @@ namespace FlappyDog
             mainWindow.ZoneJeu.Content = ucJeu;
         }
 
-        private void butMenu_Click(object sender, RoutedEventArgs e)
+        private void butRetour_Click(object sender, RoutedEventArgs e)
         {
-            // Retourner au menu principal
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
             UCAccueil ucAccueil = new UCAccueil();
             mainWindow.ZoneJeu.Content = ucAccueil;
-            //ucAccueil.butJouer.Click += mainWindow.AfficherChoixPerso;
-            //ucAccueil.butRegles.Click += mainWindow.AfficherRegles;
+            ucAccueil.butJouer.Click += mainWindow.AfficherChoixPerso;
+            ucAccueil.butRegles.Click += mainWindow.AfficherRegles;
         }
     }
 }

@@ -18,7 +18,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="butMenu" FontSize="24" Margin="212,263,500,160">
+        <Button x:Name="butMenu" FontSize="24" Margin="212,263,500,160" Click="butRetour_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/BoutonRetour_final_resized-Photoroom.png"/>
             </Button.Background>
