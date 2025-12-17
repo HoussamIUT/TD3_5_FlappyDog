@@ -134,7 +134,7 @@ namespace FlappyDog
 
             if (Canvas.GetLeft(image) + image.ActualWidth <= 0)
             {
-                Canvas.SetLeft(image, canvasJeu.ActualWidth + 250);
+                Canvas.SetLeft(image, canvasJeu.ActualWidth + 450);
             }
         }
 

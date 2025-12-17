@@ -31,7 +31,9 @@
     <None Remove="img\Chien3AilesBasSansFond.png" />
     <None Remove="img\Chien3AilesHaut.png" />
     <None Remove="img\Chien3AilesHautSansFond.png" />
+    <None Remove="img\OsBas1.png" />
     <None Remove="img\osFantome.png" />
+    <None Remove="img\OsHaut1.png" />
     <None Remove="img\osPourri.png" />
     <None Remove="img\saucisseFeu.png" />
     <None Remove="img\TitreAccueil-removebg-preview.png" />
@@ -62,8 +64,10 @@
     <Resource Include="img\Chien3AilesBas.png" />
     <Resource Include="img\Chien3AilesHaut.png" />
     <Resource Include="img\OsBas.png" />
+    <Resource Include="img\OsBas1.png" />
     <Resource Include="img\osFantome.png" />
     <Resource Include="img\OsHaut.png" />
+    <Resource Include="img\OsHaut1.png" />
     <Resource Include="img\osPourri.png" />
     <Resource Include="img\saucisseFeu.png" />
     <Resource Include="img\TitreAccueil-removebg-preview.png" />
