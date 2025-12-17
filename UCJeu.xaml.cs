@@ -56,9 +56,9 @@ namespace FlappyDog
 
         private void ChargeImages()
         {
-            AilesHaut = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}.png"));
+            AilesHaut = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{MainWindow.Perso}Corrigé.png"));
             string nomPersoBas = MainWindow.Perso.Replace("Haut", "");
-            AilesBas = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{nomPersoBas}Bas.png"));
+            AilesBas = new BitmapImage(new Uri($"pack://application:,,,/img/Chien{nomPersoBas}BasCorrigé.png"));
             
         }
 
